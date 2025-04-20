@@ -30,6 +30,9 @@ This study utilizes the German Traffic Sign Recognition Benchmark (GTSRB), a wel
 
 The dataset is divided into training and testing sets, with approximately 39,209 images for training and 12,630 images for testing. Each image in the dataset is annotated with its corresponding traffic sign class, making it suitable for supervised learning approaches.
 
+### Fine-tune
+
+The SWIN Transformer was trained on the GTSRB dataset using a supervised learning approach, leveraging data augmentation techniques such as random horizontal flips, rotations, and resized crops to improve generalization and robustness to real-world variations. The model was initialized with pretrained ImageNet weights and fine-tuned for 43 traffic sign classes using the AdamW optimizer and cross-entropy loss. Training was performed for 10 epochs with a batch size of 128, and validation accuracy was monitored after each epoch to track performance and prevent overfitting. After training, the model achieved a validation accuracy of approximately 98% and a test accuracy of around 97%, demonstrating strong recognition performance across diverse traffic sign categories.
 
 ## Explainability Method: Shapley-CAM
 ### What is Shapley-CAM?
